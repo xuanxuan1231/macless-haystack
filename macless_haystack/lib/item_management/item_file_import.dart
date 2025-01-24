@@ -66,7 +66,7 @@ class _ItemFileImportState extends State<ItemFileImport> {
       setState(() {
         hasError = true;
         errorText =
-            'Could not parse JSON file. Please check if the file is formatted correctly.';
+            '无法解析 JSON 文件。请检查文件格式是否正确。';
       });
     }
   }
@@ -107,7 +107,7 @@ class _ItemFileImportState extends State<ItemFileImport> {
     if (nrOfImports > 0) {
       var snackbar = SnackBar(
         content: Text(
-            'Successfully imported ${nrOfImports.toString()} accessories.'),
+            '成功导入 ${nrOfImports.toString()} 个设备。'),
       );
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(snackbar);
@@ -170,13 +170,13 @@ class _ItemFileImportState extends State<ItemFileImport> {
         child: Column(
           children: [
             Text(
-              'An error occured.',
+              '发生错误。',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: Text(
-                  errorText ?? 'An unknown error occured. Please try again.'),
+                  errorText ?? '发生未知错误。请重试。'),
             ),
           ],
         ),
@@ -271,7 +271,7 @@ class _ItemFileImportState extends State<ItemFileImport> {
   Widget _buildScaffold(Widget body) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Select Accessories'),
+        title: const Text('选择设备'),
         actions: [
           ElevatedButton(
             onPressed: () {
@@ -281,7 +281,7 @@ class _ItemFileImportState extends State<ItemFileImport> {
               }
             },
             child: const Text(
-              'Import'
+              '导入'
             ),
           ),
         ],

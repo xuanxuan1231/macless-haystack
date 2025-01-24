@@ -20,14 +20,14 @@ class AccessoryColorInput extends StatelessWidget {
     return ListTile(
       title: Row(
         children: [
-          const Text('Color: '),
+          const Text('颜色'),
           Icon(
             Icons.circle,
             color: color,
           ),
           const Spacer(),
           OutlinedButton(
-            child: const Text('Change'),
+            child: const Text('修改'),
             onPressed: () async {
               Color? selectedColor = await AccessoryColorSelector
                 .showColorSelection(context, color);

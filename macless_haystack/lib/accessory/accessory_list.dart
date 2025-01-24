@@ -97,7 +97,7 @@ class _AccessoryListState extends State<AccessoryList> {
                             },
                             foregroundColor: Theme.of(context).primaryColor,
                             icon: Icons.directions,
-                            label: 'Navigate',
+                            label: '导航',
                           ),
                         if (accessory.isDeployed)
                           SlidableAction(
@@ -112,7 +112,7 @@ class _AccessoryListState extends State<AccessoryList> {
                             },
                             backgroundColor: Theme.of(context).primaryColor,
                             icon: Icons.history,
-                            label: 'History',
+                            label: '历史',
                           ),
                         if (!accessory.isDeployed)
                           SlidableAction(
@@ -128,7 +128,7 @@ class _AccessoryListState extends State<AccessoryList> {
                             backgroundColor: Colors.green,
                             foregroundColor: Colors.white,
                             icon: Icons.upload_file,
-                            label: 'Deploy',
+                            label: '部署',
                           ),
                       ],
                     ),

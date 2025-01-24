@@ -28,7 +28,7 @@ class NewKeyAction extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 ListTile(
-                  title: const Text('Import Accessory'),
+                  title: const Text('导入设备'),
                   leading: const Icon(Icons.import_export),
                   onTap: () {
                     Navigator.pushReplacement(
@@ -39,7 +39,7 @@ class NewKeyAction extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Import from JSON File'),
+                  title: const Text('从 JSON 文件导入'),
                   leading: const Icon(Icons.description),
                   onTap: () async {
                     FilePickerResult? result =
@@ -47,7 +47,7 @@ class NewKeyAction extends StatelessWidget {
                       allowMultiple: false,
                       type: FileType.custom,
                       allowedExtensions: ['json'],
-                      dialogTitle: 'Select accessory configuration',
+                      dialogTitle: '选择设备配置',
                     );
 
                     if (result != null) {
@@ -77,7 +77,7 @@ class NewKeyAction extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Create new Accessory'),
+                  title: const Text('创建新设备'),
                   leading: const Icon(Icons.add_box),
                   onTap: () {
                     Navigator.pushReplacement(

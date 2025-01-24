@@ -30,7 +30,7 @@ class _DaysSelectionSliderState extends State<DaysSelectionSlider> {
         children: [
           const Center(
             child: Text(
-              'How many days back?',
+              '几天前的？',
               style: TextStyle(fontSize: 20),
             ),
           ),

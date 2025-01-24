@@ -18,18 +18,18 @@ class AccessoryPrivateKeyInput extends StatelessWidget {
       child: TextFormField(
         decoration: const InputDecoration(
           hintText: 'SGVsbG8gV29ybGQhCg==',
-          labelText: 'Private Key (Base64)',
+          labelText: '私钥（Base64）',
         ),
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return 'Private key must be provided.';
+            return '必须提供私钥。';
           }
           try {
             var removeEscaping = value
               .replaceAll('\\', '').replaceAll('\n', '');
             base64Decode(removeEscaping);
           } catch (e) {
-            return 'Value must be valid base64 key.';
+            return '值必须是有效的 Base64 值。';
           }
           return null;
         },

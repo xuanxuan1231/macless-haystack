@@ -45,7 +45,7 @@ class ItemExportMenu extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  title: const Text('Export All Accessories (JSON)'),
+                  title: const Text('导出所有设备（JSON）'),
                   onTap: () async {
                     var accessories =
                         Provider.of<AccessoryRegistry>(context, listen: false)
@@ -57,7 +57,7 @@ class ItemExportMenu extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Export Accessory (JSON)'),
+                  title: const Text('导出设备（JSON）'),
                   onTap: () async {
                     await _exportAccessoriesAsJSON([accessory]);
                     if (context.mounted) {
@@ -66,7 +66,7 @@ class ItemExportMenu extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Export Hashed Advertisement Key (Base64)'),
+                  title: const Text('导出哈希后的 Advertisement Key（Base64）'),
                   onTap: () async {
                     var advertisementKey =
                         await accessory.getHashedAdvertisementKey();
@@ -77,7 +77,7 @@ class ItemExportMenu extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Export Advertisement Key (Base64)'),
+                  title: const Text('导出 Advertisement Key（Base64）'),
                   onTap: () async {
                     var advertisementKey =
                         await accessory.getAdvertisementKey();
@@ -88,7 +88,7 @@ class ItemExportMenu extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: const Text('Export Private Key (Base64)'),
+                  title: const Text('导出私钥（Base64）'),
                   onTap: () async {
                     var privateKey = await accessory.getPrivateKey();
                     Share.share(privateKey);
@@ -185,28 +185,28 @@ class ItemExportMenu extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Key Overview'),
+          title: const Text('密钥总览'),
           content: const SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text('Private Key:',
+                Text('私钥：',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                Text('Secret key used for location report decryption.'),
-                Text('Advertisement Key:',
+                Text('用于解密位置报告的密钥。'),
+                Text('Advertisement Key：',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                Text('Shortened public key sent out over Bluetooth.'),
-                Text('Hashed Advertisement Key:',
+                Text('用蓝牙发送的缩短的公钥。'),
+                Text('哈希后的 Advertisement Key：',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                Text('Used to retrieve location reports from the server'),
-                Text('Accessory:',
+                Text('用于从服务器取回位置报告。'),
+                Text('设备：',
                     style: TextStyle(fontWeight: FontWeight.bold)),
-                Text('A file containing all information about the accessory.'),
+                Text('包含设备所有信息的文件。'),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Close'),
+              child: const Text('关闭'),
               onPressed: () {
                 Navigator.of(context, rootNavigator: true).pop();
               },

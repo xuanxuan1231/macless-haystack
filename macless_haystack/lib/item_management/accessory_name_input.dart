@@ -20,14 +20,14 @@ class AccessoryNameInput extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
       child: TextFormField(
         decoration: const InputDecoration(
-          labelText: 'Name',
+          labelText: '名称',
         ),
         validator: (value) {
           if (value == null) {
-            return 'Name must be provided.';
+            return '必须提供名称。';
           }
           if (value.isEmpty || value.length > 30) {
-            return 'Name must be a non empty string of max length 30.';
+            return '名称必须是一个非空字符串，最大长度为 30。';
           }
           return null;
         },

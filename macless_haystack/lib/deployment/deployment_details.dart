@@ -38,7 +38,7 @@ class _DeploymentDetailsState extends State<DeploymentDetails> {
           currentStep: _index,
           controlsBuilder: (BuildContext context, ControlsDetails details) {
             String continueText =
-                _index < stepCount - 1 ? 'CONTINUE' : 'FINISH';
+                _index < stepCount - 1 ? '继续' : '完成';
             return Row(
               children: <Widget>[
                 ElevatedButton(
@@ -51,7 +51,7 @@ class _DeploymentDetailsState extends State<DeploymentDetails> {
                 if (_index > 0)
                   TextButton(
                     onPressed: details.onStepCancel,
-                    child: const Text('BACK'),
+                    child: const Text('返回'),
                   ),
               ],
             );

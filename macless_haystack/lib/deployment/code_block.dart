@@ -30,7 +30,7 @@ class CodeBlock extends StatelessWidget {
             top: 0,
             right: 5,
             child: OutlinedButton(
-              child: const Text('Copy'),
+              child: const Text('拷贝'),
               onPressed: () {
                 Clipboard.setData(ClipboardData(text: text));
               },

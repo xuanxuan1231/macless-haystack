@@ -19,7 +19,7 @@ class _PreferencesPageState extends State<PreferencesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: const Text('设置'),
       ),
       body: Center(
         child: Column(
@@ -41,7 +41,7 @@ class _PreferencesPageState extends State<PreferencesPage> {
   getLocationTile() {
     return SwitchSettingsTile(
       settingKey: locationAccessWantedKey,
-      title: 'Show this devices location',
+      title: '显示设备未知',
       onChange: (showLocation) {
         var locationModel = Provider.of<LocationModel>(context, listen: false);
         if (showLocation) {
@@ -55,10 +55,10 @@ class _PreferencesPageState extends State<PreferencesPage> {
 
   getNumberofDaysTile() {
     return DropDownSettingsTile<int>(
-      title: 'Number of days to fetch location',
+      title: '获取位置的天数',
       settingKey: numberOfDaysToFetch,
       values: const <int, String>{
-        0: "latest location only",
+        0: "仅最新位置",
         1: "1",
         2: "2",
         3: "3",
@@ -75,13 +75,13 @@ class _PreferencesPageState extends State<PreferencesPage> {
     return TextInputSettingsTile(
       initialValue: 'http://localhost:6176',
       settingKey: endpointUrl,
-      title: 'Url to macless haystack endpoint',
+      title: 'Macless Haystack 的终结点 Url',
       validator: (String? url) {
         if (url != null &&
             url.startsWith(RegExp('http[s]?://', caseSensitive: false))) {
           return null;
         }
-        return "Invalid Url";
+        return "无效的 Url";
       },
     );
   }
@@ -89,7 +89,7 @@ class _PreferencesPageState extends State<PreferencesPage> {
     return TextInputSettingsTile(
       initialValue: '',
       settingKey: endpointUser,
-      title: 'Username for endpoint',
+      title: '终结点用户',
     );
   }
 
@@ -98,7 +98,7 @@ class _PreferencesPageState extends State<PreferencesPage> {
       obscureText: true,
       initialValue: '',
       settingKey: endpointPass,
-      title: 'Password for endpoint',
+      title: '终结点密码',
     );
   }
 
@@ -118,7 +118,7 @@ class _PreferencesPageState extends State<PreferencesPage> {
                 return Colors.indigo;
               },
             )),
-        child: const Text('About'),
+        child: const Text('关于'),
         onPressed: () => showAboutDialog(
               context: context,
             ));

@@ -31,7 +31,7 @@ class KeyManagement extends StatelessWidget {
               String lastSeen = accessory.datePublished != null
                   ? DateFormat('dd.MM.yyyy kk:mm')
                       .format(accessory.datePublished!)
-                  : 'Unknown';
+                  : '未知';
               return Material(
                   child: ListTile(
                 onTap: () {
@@ -45,7 +45,7 @@ class KeyManagement extends StatelessWidget {
                 },
                 dense: true,
                 title: Text(accessory.name),
-                subtitle: Text('Last seen: $lastSeen'),
+                subtitle: Text('上次发现：$lastSeen'),
                 leading: AccessoryIcon(
                   icon: accessory.icon,
                   color: accessory.color,

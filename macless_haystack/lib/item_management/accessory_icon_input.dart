@@ -26,11 +26,11 @@ class AccessoryIconInput extends StatelessWidget {
     return ListTile(
       title: Row(
         children: [
-          const Text('Icon: '),
+          const Text('图标：'),
           Icon(initialIcon),
           const Spacer(),
           OutlinedButton(
-            child: const Text('Change'),
+            child: const Text('修改'),
             onPressed: () async {
               String? selectedIcon = await AccessoryIconSelector
                 .showIconSelection(context, iconString, color);

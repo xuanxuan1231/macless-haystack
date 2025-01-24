@@ -73,7 +73,7 @@ class _AccessoryHistoryState extends State<AccessoryHistory> {
     return Scaffold(
       appBar: AppBar(
         title:
-            Text("${widget.accessory.name} ($historyLength history reports)"),
+            Text("${widget.accessory.name}（$historyLength 个历史报告）"),
       ),
       body: SafeArea(
         child: Column(
@@ -107,8 +107,8 @@ class _AccessoryHistoryState extends State<AccessoryHistory> {
                 children: [
                   TileLayer(
                       tileProvider: CancellableNetworkTileProvider(),
-                      urlTemplate:
-                          'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                      //urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png", // 需要替换
+                      urlTemplate: "https://mt.mapplus.cn/v1.0/gh/{z}/{x}/{y}.png" // 已经替换
                       tileBuilder: (context, child, tile) {
                         var isDark =
                             (Theme.of(context).brightness == Brightness.dark);

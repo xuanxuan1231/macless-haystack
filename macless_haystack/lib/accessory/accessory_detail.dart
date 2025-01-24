@@ -116,7 +116,7 @@ class _AccessoryDetailState extends State<AccessoryDetail> {
               ),
               SwitchListTile(
                 value: newAccessory.isActive,
-                title: const Text('Is Active'),
+                title: const Text('正活跃'),
                 onChanged: (checked) {
                   setState(() {
                     newAccessory.isActive = checked;
@@ -125,7 +125,7 @@ class _AccessoryDetailState extends State<AccessoryDetail> {
               ),
               SwitchListTile(
                 value: newAccessory.isDeployed,
-                title: const Text('Is Deployed'),
+                title: const Text('已部署'),
                 onChanged: (checked) {
                   setState(() {
                     newAccessory.isDeployed = checked;
@@ -148,12 +148,12 @@ class _AccessoryDetailState extends State<AccessoryDetail> {
                                 widget.accessory, newAccessory);
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                content: Text('Changes saved!'),
+                                content: Text('修改已保存。'),
                               ),
                             );
                           }
                         },
-                  child: const Text('Save'),
+                  child: const Text('保存'),
                 ),
               ),
               ListTile(
@@ -166,7 +166,7 @@ class _AccessoryDetailState extends State<AccessoryDetail> {
                     ),
                   ),
                   child: const Text(
-                    'Delete Accessory',
+                    '删除设备',
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () {

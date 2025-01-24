@@ -19,11 +19,11 @@ class AccessoryIdInput extends StatelessWidget {
         ),
         validator: (value) {
           if (value == null) {
-            return 'ID must be provided.';
+            return 'I必须提供 ID。';
           }
           int? parsed = int.tryParse(value);
           if (parsed == null) {
-            return 'ID must be an integer value.';
+            return 'ID 必须为整数。';
           }
           return null;
         },

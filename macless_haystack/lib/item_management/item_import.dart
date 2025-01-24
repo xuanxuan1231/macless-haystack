@@ -41,7 +41,7 @@ class _AccessoryImportState extends State<AccessoryImport> {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content:
-                  Text('Key import failed. Check if private key is correct.'),
+                  Text('密钥导入失败。检查私钥是否正确。'),
             ),
           );
         }
@@ -62,7 +62,7 @@ class _AccessoryImportState extends State<AccessoryImport> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Import Accessory'),
+        title: const Text('导入设备'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -71,7 +71,7 @@ class _AccessoryImportState extends State<AccessoryImport> {
             children: [
               const ListTile(
                 title: Text(
-                    'Please enter the accessory parameters. They can be found in the exported accessory file.'),
+                    '请输入设备参数。它们可在导出的设备的文件中找到。'),
               ),
               AccessoryIdInput(
                 changeListener: (id) => setState(() {
@@ -116,7 +116,7 @@ class _AccessoryImportState extends State<AccessoryImport> {
               ),
               SwitchListTile(
                 value: newAccessory.isActive,
-                title: const Text('Is Active'),
+                title: const Text('正活跃'),
                 onChanged: (checked) {
                   setState(() {
                     newAccessory.isActive = checked;
@@ -125,7 +125,7 @@ class _AccessoryImportState extends State<AccessoryImport> {
               ),
               SwitchListTile(
                 value: newAccessory.isDeployed,
-                title: const Text('Is Deployed'),
+                title: const Text('已部署'),
                 onChanged: (checked) {
                   setState(() {
                     newAccessory.isDeployed = checked;
@@ -134,7 +134,7 @@ class _AccessoryImportState extends State<AccessoryImport> {
               ),
               ListTile(
                 title: ElevatedButton(
-                  child: const Text('Import'),
+                  child: const Text('导入'),
                   onPressed: () => importKey(context),
                 ),
               ),

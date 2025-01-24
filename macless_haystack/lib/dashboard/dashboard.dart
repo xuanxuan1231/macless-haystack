@@ -28,21 +28,21 @@ class _DashboardState extends State<Dashboard> {
   /// A list of the tabs displayed in the bottom tab bar.
   late final List<Map<String, dynamic>> _tabs = [
     {
-      'title': 'My Accessories',
+      'title': '我的设备',
       'body': (ctx) => AccessoryMapListVertical(
             loadLocationUpdates: loadLocationUpdates,
           ),
       'icon': Icons.place,
-      'label': 'Map',
+      'label': '地图',
       'actionButton': (ctx) => RefreshAction(
             callback: loadLocationUpdates,
           ),
     },
     {
-      'title': 'My Accessories',
+      'title': '我的设备',
       'body': (ctx) => const KeyManagement(),
       'icon': Icons.style,
-      'label': 'Accessories',
+      'label': '设备',
       'actionButton': (ctx) => const NewKeyAction(),
     },
   ];
@@ -81,7 +81,7 @@ class _DashboardState extends State<Dashboard> {
           SnackBar(
             backgroundColor: Theme.of(context).colorScheme.primary,
             content: Text(
-              'Fetched $count location(s)',
+              '获取了 $count 个地点',
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onPrimary,
               ),
@@ -90,12 +90,12 @@ class _DashboardState extends State<Dashboard> {
         );
       }
     } catch (e, stacktrace) {
-      logger.e('Error on fetching', error: e, stackTrace: stacktrace);
+      logger.e('获取失败', error: e, stackTrace: stacktrace);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           backgroundColor: Theme.of(context).colorScheme.error,
           content: Text(
-            'Could not find location reports. Try again later. Error: ${e.toString()}',
+            '找不到地点报告。请稍后再试。Error: ${e.toString()}',
             style: TextStyle(
               color: Theme.of(context).colorScheme.onError,
             ),
@@ -119,7 +119,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Accessories'),
+        title: const Text('我的设备'),
         actions: <Widget>[
           IconButton(
             onPressed: () {

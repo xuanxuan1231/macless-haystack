@@ -21,7 +21,7 @@ class _RefreshingWidgetState extends State<RefreshAction> {
         onPressed: () {
           widget.callback.call();
         },
-        tooltip: 'Refresh',
+        tooltip: '刷新',
         child: const Icon(Icons.refresh));
   }
 }

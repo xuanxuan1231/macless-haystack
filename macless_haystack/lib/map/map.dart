@@ -140,7 +140,8 @@ class _AccessoryMapState extends State<AccessoryMap> {
                     )
                   : child;
             },
-            urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            //urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png", // 需要替换
+            urlTemplate: "https://mt.mapplus.cn/v1.0/gh/{z}/{x}/{y}.png" // 已经替换
           ),
           MarkerLayer(
             markers: [

@@ -38,7 +38,7 @@ class AccessoryListItem extends StatelessWidget {
         //   * `Unknown` if unknown
         String locationString = accessory.lastLocation != null
           ? '${accessory.lastLocation!.latitude.toStringAsFixed(4)}, ${accessory.lastLocation!.longitude.toStringAsFixed(4)}'
-          : 'Unknown';
+          : '未知';
         if (snapshot.hasData && snapshot.data != null) {
           Placemark place = snapshot.data!;
           locationString = '${place.locality}, ${place.administrativeArea}';
@@ -54,7 +54,7 @@ class AccessoryListItem extends StatelessWidget {
           onTap: onTap,
           onLongPress: onLongPress,
           title: Text(
-            accessory.name + (accessory.isDeployed ? '' : ' (not deployed)'),
+            accessory.name + (accessory.isDeployed ? '' : '（未部署）'),
             style: TextStyle(
               color: accessory.isDeployed
                 ? Theme.of(context).colorScheme.onSurface

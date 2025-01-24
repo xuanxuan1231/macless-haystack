@@ -40,8 +40,8 @@ class LocationPopup extends Marker {
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'Lat: ${location.round(decimals: 2).latitude}, '
-                        'Lng: ${location.round(decimals: 2).longitude}',
+                        '纬度：${location.round(decimals: 2).latitude}， '
+                        '经度：${location.round(decimals: 2).longitude}',
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],

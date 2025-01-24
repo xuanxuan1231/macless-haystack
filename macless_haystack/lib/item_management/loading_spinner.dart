@@ -13,7 +13,7 @@ class LoadingSpinner extends StatelessWidget {
         padding: const EdgeInsets.only(top: 20),
         child: CircularProgressIndicator(
           color: Theme.of(context).primaryColor,
-          semanticsLabel: 'Loading. Please wait.',
+          semanticsLabel: '加载中。请坐和放宽。',
         ),
       )],
     );

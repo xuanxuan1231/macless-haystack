@@ -15,7 +15,7 @@ class NoAccessoriesPlaceholder extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'There\'s Nothing Here Yet\nAdd an accessory to get started.',
+            '这里什么也没有。添加一个设备。',
             style: TextStyle(
               fontSize: 20,
               color: Colors.grey,

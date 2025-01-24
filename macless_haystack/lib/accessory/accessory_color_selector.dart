@@ -19,7 +19,7 @@ class AccessoryColorSelector extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Pick a color'),
+          title: const Text('选择颜色'),
           content: SingleChildScrollView(
             child: ColorPicker(
               hexInputBar: true,
@@ -31,7 +31,7 @@ class AccessoryColorSelector extends StatelessWidget {
           ),
           actions: <Widget>[
             ElevatedButton(
-              child: const Text('Save'),
+              child: const Text('保存'),
               onPressed: () {
                 Navigator.pop(context, currentColor);
               },

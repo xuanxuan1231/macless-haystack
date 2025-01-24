@@ -57,7 +57,7 @@ class _AccessoryGenerationState extends State<AccessoryGeneration> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create new Accessory'),
+        title: const Text('创建新设备'),
       ),
       body: SingleChildScrollView(
         child: Form(
@@ -93,11 +93,11 @@ class _AccessoryGenerationState extends State<AccessoryGeneration> {
               ),
               const ListTile(
                 title: Text(
-                    'A secure key pair will be generated for you automatically.'),
+                    '一个密钥对将自动为您生成。'),
               ),
               SwitchListTile(
                 value: newAccessory.isActive,
-                title: const Text('Is Active'),
+                title: const Text('正活跃'),
                 onChanged: (checked) {
                   setState(() {
                     newAccessory.isActive = checked;
@@ -106,7 +106,7 @@ class _AccessoryGenerationState extends State<AccessoryGeneration> {
               ),
               SwitchListTile(
                 value: newAccessory.isDeployed,
-                title: const Text('Is Deployed'),
+                title: const Text('已部署'),
                 onChanged: (checked) {
                   setState(() {
                     newAccessory.isDeployed = checked;
@@ -115,7 +115,7 @@ class _AccessoryGenerationState extends State<AccessoryGeneration> {
               ),
               ListTile(
                 title: OutlinedButton(
-                  child: const Text('Create only'),
+                  child: const Text('仅创建'),
                   onPressed: () async {
                     var created = await createAccessory(context);
                     if (created && mounted) {
@@ -126,7 +126,7 @@ class _AccessoryGenerationState extends State<AccessoryGeneration> {
               ),
               ListTile(
                 title: ElevatedButton(
-                  child: const Text('Create and Deploy'),
+                  child: const Text('创建并部署'),
                   onPressed: () async {
                     var created = await createAccessory(context);
                     if (created && mounted) {
