@@ -108,7 +108,7 @@ class _AccessoryHistoryState extends State<AccessoryHistory> {
                   TileLayer(
                       tileProvider: CancellableNetworkTileProvider(),
                       //urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png", // 需要替换
-                      urlTemplate: "https://mt.mapplus.cn/v1.0/gh/{z}/{x}/{y}.png" // 已经替换
+                      urlTemplate: "https://mt.mapplus.cn/v1.0/gh/{z}/{x}/{y}.png", // 已经替换
                       tileBuilder: (context, child, tile) {
                         var isDark =
                             (Theme.of(context).brightness == Brightness.dark);
