@@ -29,7 +29,7 @@ class KeyManagement extends StatelessWidget {
           child: ListView(
             children: accessories.map((accessory) {
               String lastSeen = accessory.datePublished != null
-                  ? DateFormat('dd.MM.yyyy kk:mm')
+                  ? DateFormat('yyyy.dd.MM kk:mm')
                       .format(accessory.datePublished!)
                   : '未知';
               return Material(
